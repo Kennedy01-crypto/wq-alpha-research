@@ -1,4 +1,8 @@
-# WQ Alpha Research Skill
+# WQ Alpha Research Skill — 4 Days, Zero Human Intervention, From Zero to WorldQuant BRAIN Gold Medal 
+
+
+<p align="center"><img src="pic/20260626094115.png" width="600"></p>
+
 
 A self-evolving WorldQuant BRAIN alpha research skill. It helps agents design WQ Alpha expressions, search fields, diagnose simulation failures, check IS metrics, manage self-correlation, and turn each BRAIN interaction into reusable research rules.
 
@@ -149,3 +153,12 @@ Join the QuantML factor-research WeChat group, or scan the personal QR code to a
 | WeChat Group: QuantML Factor Research | Add Me as Friend |
 | :---: | :---: |
 | <img src="pic/20260624124943.jpg" width="300" alt="QuantML Factor Research Group QR"> | <img src="pic/20260624125220.jpg" width="300" alt="Add Friend QR"> |
+
+
+## License & Attribution
+
+This project is licensed under the [Creative Commons Attribution-NonCommercial 4.0 International License (CC BY-NC 4.0)](https://creativecommons.org/licenses/by-nc/4.0/).
+
+You are free to use, modify, and share the code and content for non-commercial purposes, provided that you clearly cite the source and provide attribution to the original author.
+
+If you use this work in your research, project, or publication, please include a link or reference back to this repository.

@@ -186,7 +186,7 @@ rank(ts_rank(operating_income / sales * sales / assets, 126))
 | SELF_CORRELATION | **日收益** 相关系数 < 0.7 | 与已有因子太像 | 换信号簇、加过滤、换 Universe；不要只调参数 |
 | MATCHES_COMPETITION | 信息性 | — | 无影响 |
 
-### 5.3 失败统计（625 个实测）
+### 5.3 失败统计
 
 | 失败原因 | 占比 | 结论 |
 |----------|------|------|
@@ -618,3 +618,6 @@ pyenv exec python scripts/evolve_skill.py --apply
 
 > 本节仅保留机制说明。真实运行生成的 alpha ID、表达式、PnL、提交状态和相关性记录可能关联个人账号与研究资产，默认写入本地 `alpha_db.json`，不随仓库发布。
 > 若需要沉淀通用经验，请人工汇总成脱敏规则后再写回第 4、5、6、8、10 节。
+
+
+
