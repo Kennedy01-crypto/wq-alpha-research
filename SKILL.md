@@ -634,9 +634,7 @@ After the script runs, the AI should make a manual judgment about which entries 
 > This section only preserves the mechanism. Real runs may generate alpha IDs, expressions, PnL values, submission status, and correlation records tied to a personal account and research assets. By default, these are written to the local `alpha_db.json` and not published with the repository.
 > If you want to preserve general lessons, summarize them into sanitized rules and then write them back into Sections 4, 5, 6, 8, and 10.
 
-
 ## 12. 实证记录（自动更新）
-
 
 ### 2026-07-19 17:12 UTC — 批量初始化快照
 
@@ -644,6 +642,7 @@ After the script runs, the AI should make a manual judgment about which entries 
 - 信号簇分布：{'other': 1471, 'technical': 112, 'technical+sentiment': 110, 'sentiment': 15, 'analyst': 8, 'quality/leverage': 6, 'technical+quality/leverage': 1}
 
 **ACTIVE 高 Fitness Top 5**：
+
 - `bl9vdZn6` (other): Sharpe=2.38, Fitness=3.16, TO=0.144 — `trade_when(pcr_oi_270 < 1, (implied_volatility_call_270 -implied_volatility_put_270), -1)`
 - `WjGZ5LRN` (sentiment): Sharpe=2.08, Fitness=2.52, TO=0.138 — `ts_decay_linear(`
 - `9qJdmqMV` (other): Sharpe=1.81, Fitness=2.43, TO=0.027 — `anl4_adjusted_netincome_ft`
@@ -653,9 +652,11 @@ After the script runs, the AI should make a manual judgment about which entries 
 **ACTIVE 中日收益高相关对**：无 ≥ 0.7 的对（或 PnL 不足）
 
 **明显失效信号（Fitness < 0.5，共 965 个）**：
+
 - 簇分布：{'other': 858, 'technical+sentiment': 50, 'technical': 44, 'sentiment': 8, 'quality/leverage': 5}
 
 **高换手（TO > 50%，共 150 个）**：
+
 - 簇分布：{'technical+sentiment': 65, 'other': 53, 'technical': 25, 'sentiment': 7}
 
 ---
@@ -784,4 +785,3 @@ After the script runs, the AI should make a manual judgment about which entries 
   - 表达式：`cum_rel_return = (1+ts_delay(rel_ret_all,4))*(1+ts_delay(rel_ret_all,3))*(1+ts_delay(rel_ret_all,2))*(1+ts_delay(rel_...`
 
 ---
-
