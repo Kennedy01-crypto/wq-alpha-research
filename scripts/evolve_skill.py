@@ -59,8 +59,22 @@ def load_credentials() -> tuple[str, str]:
     ]
     for p in candidates:
         if p.exists():
-            username, password = json.loads(p.read_text(encoding="utf-8"))
-            return str(username), str(password)
+            try:
+                raw = json.loads(p.read_text(encoding="utf-8"))
+            except json.JSONDecodeError as exc:
+                raise RuntimeError(f"Could not parse credential file: {p}. Expected a JSON array like [\"user\", \"password\"] or an object with username/password keys.") from exc
+
+            if isinstance(raw, dict):
+                username = raw.get("username") or raw.get("email") or raw.get("user")
+                password = raw.get("password")
+            elif isinstance(raw, list) and len(raw) >= 2:
+                username, password = raw[0], raw[1]
+            else:
+                raise RuntimeError(f"Unsupported credential format in {p}. Use [\"username\", \"password\"] or {{\"username\": \"...\", \"password\": \"...\"}}.")
+
+            if username and password:
+                return str(username), str(password)
+
     raise FileNotFoundError(
         "BRAIN credentials not found. Set WQ_BRAIN_USERNAME/WQ_BRAIN_PASSWORD "
         'or create an untracked credential.txt with ["your_username", "your_password"].'
